@@ -45,3 +45,18 @@ code {
 .container {
   height: auto;
 }
+
+.navbar {
+  width: 100%;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .img-landing {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+}
+
+.img-landing {
+  padding-bottom: 30px;
+}
