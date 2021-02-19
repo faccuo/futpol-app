@@ -4,8 +4,9 @@ import 'open-iconic/font/css/open-iconic-bootstrap.min.css'
 import Head from "next/head";
 import {Button, Form, Navbar} from "react-bootstrap";
 import Link from "next/link";
+import {motion} from "framer-motion";
 
-function Application({Component, pageProps}) {
+function Application({Component, pageProps, router}) {
   return (
     <>
       <Head>
@@ -25,7 +26,16 @@ function Application({Component, pageProps}) {
             </Link>
           </Form>
         </Navbar>
-        <Component {...pageProps} />
+        <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
+          pageInitial: {
+            opacity: 0
+          },
+          pageAnimate: {
+            opacity: 1
+          },
+        }}>
+          <Component {...pageProps} />
+        </motion.div>
       </div>
     </>
   )
