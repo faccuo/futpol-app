@@ -1,21 +1,20 @@
-import {Button, Form, FormControl, Jumbotron, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Button, Form, FormControl, Image, Jumbotron, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Head} from "next/document";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar bg="white" expand="lg">
-        <Navbar.Brand href="#" >
+    <div className="container">
+      <Navbar bg="white">
+        <Navbar.Brand href="#">
           <img src="logo.png" height="30"/>
         </Navbar.Brand>
       </Navbar>
-      <div className="container">
-        <Jumbotron className="text-center">
-          <h1 className="jumbotron-heading">Crea porras gratis en segundos</h1>
-          <p className="lead text-muted">Participa y comparte tu pronóstico sin instalar ninguna app. No requiere
-            registro.</p>
-          <img src="landing.png" className="img-fluid"/>
-        </Jumbotron>
-      </div>
+      <Jumbotron className="text-center">
+        <h1 className="jumbotron-heading">Crea porras gratis en segundos</h1>
+        <p className="lead text-muted">Participa y comparte tu pronóstico sin instalar ninguna app. No requiere
+          registro.</p>
+        <Image src="landing.png" fluid/>
+      </Jumbotron>
     </div>
   )
 }
