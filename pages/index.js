@@ -1,23 +1,21 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import {Button, Form, FormControl, Jumbotron, Nav, Navbar, NavDropdown} from "react-bootstrap";
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
-      <Footer />
+    <div>
+      <Navbar bg="white" expand="lg">
+        <Navbar.Brand href="#" >
+          <img src="logo.png" height="30"/>
+        </Navbar.Brand>
+      </Navbar>
+      <div className="container">
+        <Jumbotron className="text-center">
+          <h1 className="jumbotron-heading">Crea porras gratis en segundos</h1>
+          <p className="lead text-muted">Participa y comparte tu pronóstico sin instalar ninguna app. No requiere
+            registro.</p>
+          <img src="landing.png" className="img-fluid"/>
+        </Jumbotron>
+      </div>
     </div>
   )
 }

@@ -33,3 +33,15 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.jumbotron {
+  background-color: #fff!important;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.container {
+  height: auto;
+}
