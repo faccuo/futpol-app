@@ -1,7 +1,7 @@
 import {Button, Form, Image, Jumbotron, Navbar} from "react-bootstrap";
 import Link from "next/link"
 
-export default function Home() {
+export default function Index() {
   return (
     <Jumbotron className="text-center">
       <h1 className="jumbotron-heading">Crea porras gratis en segundos</h1>
