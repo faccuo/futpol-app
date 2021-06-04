@@ -28,7 +28,7 @@ code {
 
 .container {
   height: auto;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -58,6 +58,6 @@ code {
 }
 
 .create-component {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
