@@ -1,4 +1,4 @@
-import { TextField } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 
 export default function Create() {
@@ -109,20 +109,28 @@ export default function Create() {
   return (
     <div className="text-center">
       <Autocomplete
-        id="combo-box-local"
+        id="home"
         className="create-component"
         options={top100Films}
         getOptionLabel={(option) => option.title}
         renderInput={(params) => <TextField {...params} label="Equipo local" variant="outlined" />}
       />
       <Autocomplete
-        id="combo-box-visitante"
+        id="awat"
         className="create-component"
         options={top100Films}
         getOptionLabel={(option) => option.title}
-        style={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="Equipo visitante" variant="outlined" />}
       />
+      <TextField
+        id="description"
+        label="Descripción"
+        variant="outlined"
+        fullWidth
+      />
+      <Button variant="contained" color="primary" style={{ marginTop: '40px' }}>
+        Crear
+      </Button>
     </div>
   )
 }

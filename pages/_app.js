@@ -1,10 +1,10 @@
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, Container, IconButton, Toolbar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { AddBox } from '@material-ui/icons';
 import '@styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { motion } from "framer-motion";
 import Head from "next/head";
-import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
 
@@ -28,7 +28,7 @@ function Application({ Component, pageProps, router }) {
           <div className={classes.logo}>
             <Link href="/" passHref>
               {/* <img src="logo.png" height="30" /> */}
-              <Button startIcon={<img src="logo.png" height="30" />} style={{ backgroundColor: 'transparent' }} disableRipple/> 
+              <Button startIcon={<img src="logo.png" height="30" />} style={{ backgroundColor: 'transparent' }} disableRipple />
             </Link>
           </div>
           <Link href="/create" passHref>
@@ -46,7 +46,9 @@ function Application({ Component, pageProps, router }) {
           opacity: 1
         },
       }}>
-        <Component {...pageProps} />
+        <Container maxWidth="md" component="main" align="center">
+          <Component {...pageProps} />
+        </Container>
       </motion.div>
     </>
   )
