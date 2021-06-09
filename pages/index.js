@@ -20,9 +20,6 @@ export default function Index() {
       <div align="center">
         <img src="landing.png" style={{ objectFit: 'contain', width: '80%' }} />
       </div>
-      {/* <Container fluid>
-          <img src="landing.png" />
-        </Container> */}
       <Link href="/create">
         <Button variant="contained" color="primary" style={{ marginTop: '40px' }}>
           Empezar
