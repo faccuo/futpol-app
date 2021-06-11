@@ -2,8 +2,8 @@ import { Button, TextField } from "@material-ui/core";
 import { Autocomplete } from "@material-ui/lab";
 import axios from "axios";
 
-export async function getServerSideProps() {
-  const url = process.env.VERCEL_URL || 'http://localhost:1337';
+export async function getStaticProps() {
+  const url = process.env.API_URL || 'http://localhost:1337';
   try {
     const res = await axios.get(`${url}/teams`);
     const teams = res.data;
